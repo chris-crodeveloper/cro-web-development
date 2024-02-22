@@ -1,0 +1,5 @@
+node_modules
+.DS_Store
+public/
+.yo-rc.json
+dev.config.js
