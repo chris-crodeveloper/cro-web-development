@@ -9,12 +9,12 @@
   "emeraldwalk.runonsave": {
     "commands": [
       {
-        "match": "src\\\\js\\\\.*\\.js$",
-        "cmd": "webpack --env entry=${file} --env destination=${fileDirname}\\..\\..\\dist\\js\\ --env filename=${fileBasenameNoExt}.js"
+        "match": "src\/js\/.*\\.js$",
+        "cmd": "webpack --env entry=${file} --env destination=${fileDirname}\/..\/..\/dist\/js\/ --env filename=${fileBasenameNoExt}.js"
       },
       {
-        "match": "src\\\\scss\\\\.*\\.scss$",
-        "cmd": "webpack --env entry=${file} --env destination=${fileDirname}\\..\\..\\dist\\css\\ --env filename=${fileBasenameNoExt}"
+        "match": "src\/scss\/.*\\.scss$",
+        "cmd": "webpack --env entry=${file} --env destination=${fileDirname}\/..\/..\/dist\/css\/ --env filename=${fileBasenameNoExt}"
       }
     ]
   },

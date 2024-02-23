@@ -1,0 +1,157 @@
+@use "./fonts" as f;
+
+@mixin desktop {
+  @media screen and (min-width: 991px) {
+    @content;
+  }
+}
+
+@mixin smalldesktop {
+  @media screen and (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin smallmobile {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin very-small-mobile {
+  @media screen and (max-width: 360px) {
+    @content;
+  }
+}
+
+@mixin except-smallmobile {
+  @media screen and (min-width: 500px) {
+    @content;
+  }
+}
+
+@mixin ipad-landscape {
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin cta($background: #5f2878, $fontColour: #fff, $borderColour: #5f2878) {
+  padding: 8px 32px;
+  height: 48px;
+  border-radius: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid $borderColour;
+  cursor: pointer;
+  background: $background;
+  width: fit-content;
+  min-width: 230px;
+  text-decoration: none;
+
+  @include mobile {
+    width: 100%;
+  }
+
+  span {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    color: $fontColour;
+    font-family: f.$chat;
+  }
+}
+
+@mixin ctaBlock {
+  a:first-of-type {
+    @include cta("primary");
+  }
+
+  a:last-of-type {
+    @include cta("secondary");
+    margin-top: 24px;
+  }
+}
+
+@mixin thin-banner() {
+  .cro-thin-banner-1 {
+    border: solid 1px #dbdbdb;
+    display: flex;
+    margin-bottom: 24px;
+    padding-right: 0;
+    justify-content: space-between !important;
+
+    @include mobile {
+      flex-direction: column;
+      padding-left: 0;
+    }
+
+    &--ctas {
+      display: flex;
+
+      @include mobile {
+        flex-direction: column;
+      }
+
+      a:first-of-type {
+        margin-right: 20px;
+
+        @include mobile {
+          margin-right: 0px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    &--content {
+      padding: 24px;
+
+      h3 {
+        font-size: 20px;
+        margin-bottom: 8px;
+      }
+      p {
+        font-size: 16px;
+        margin-bottom: 16px;
+        max-width: 60%;
+
+        @include tablet {
+          max-width: 100%;
+        }
+
+        @include mobile {
+          max-width: 100%;
+        }
+      }
+
+      a {
+        @include cta;
+      }
+    }
+
+    &--image {
+      img {
+        display: block;
+        max-width: 350px;
+
+        @include mobile {
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

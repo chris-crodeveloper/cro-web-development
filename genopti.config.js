@@ -7,7 +7,25 @@
 // Add import for cro-web-development here - if it exists overwrite the below
 module.exports = {
   optimizely: {
-    projects: [],
+    projects: [
+      {
+        project_name: "Staging",
+        auth_token: "2:xlB74GWqa8eGa2NMn65huT_4AMNfEBtKX9ip0MdoQkJ55VkGQ3tg",
+        project_id: 23213161702,
+        audiences: {
+          "optiqa=true": 25218550917,
+        },
+        default: true,
+      },
+      {
+        project_name: "Prod",
+        auth_token: "2:xlB74GWqa8eGa2NMn65huT_4AMNfEBtKX9ip0MdoQkJ55VkGQ3tg",
+        project_id: 23213161702,
+        audiences: {
+          "optiqa=true": 25218550917,
+        },
+      },
+    ],
   },
 
   // Input configuation
@@ -76,6 +94,6 @@ module.exports = {
 
   // Custom Templates
   templates: {
-    customDirectory: "_custom-templates",
+    customDirectory: "_templates",
   },
 };
