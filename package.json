@@ -24,7 +24,7 @@
     "express": "^4.18.2",
     "file-loader": "^6.2.0",
     "fs": "^0.0.1-security",
-    "generator-cro": "^1.0.5",
+    "generator-cro": "^1.0.9",
     "jsdoc": "^4.0.2",
     "postcss": "^8.4.35",
     "postcss-loader": "^8.1.0",
