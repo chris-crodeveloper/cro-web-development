@@ -1,10 +1,12 @@
 /**
  * genopti.config.js
  * Contains the configuration for the Optimizely Generator
- * This generator can be used in conjunction with the npm package 'cro-web-development' (ADD URL HERE).
  */
 
-// Add import for cro-web-development here - if it exists overwrite the below
+require("dotenv").config();
+
+// Create a .env file and add environment variables in this config. For example 'process.env.AUTH_TOKEN'
+
 module.exports = {
   optimizely: {
     projects: [],
@@ -16,7 +18,7 @@ module.exports = {
       childFolders: [],
       developers: [],
       homepageUrl: "https://www.optimizely.com/",
-      testIdExample: "OPTI-1",
+      testIdExample: "Opti-1",
       testNameExample: "My First Optimizely Test",
     },
     files: {
