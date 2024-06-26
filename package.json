@@ -7,6 +7,7 @@
     "serve": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "docs": "jsdoc -c jsdoc.json --readme ./global-utils/readme/README.md",
+    "cro": "node server.js && gulp",
     "install-extensions": "npm install -g @vscode/vsce && code --install-extension emeraldwalk.RunOnSave && code --install-extension formulahendry.code-runner && code --install-extension esbenp.prettier-vscode && code --install-extension syler.sass-indented"
   },
   "repository": {
@@ -21,6 +22,7 @@
   "homepage": "https://github.com/chris-crodeveloper/cro-web-development#readme",
   "dependencies": {
     "css-loader": "^6.10.0",
+    "del": "^4.1.1",
     "dotenv": "^16.4.5",
     "express": "^4.18.2",
     "file-loader": "^6.2.0",
@@ -38,5 +40,9 @@
     "uglify-js": "^3.17.4",
     "webpack": "^5.90.3",
     "webpack-cli": "^5.1.4"
+  },
+  "devDependencies": {
+    "chokidar": "^3.6.0",
+    "gulp": "^5.0.0"
   }
 }
