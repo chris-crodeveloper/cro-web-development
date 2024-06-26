@@ -6,8 +6,7 @@
   "scripts": {
     "serve": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "docs": "jsdoc -c jsdoc.json --readme ./global-utils/readme/README.md",
-    "install-extensions": "npm install -g @vscode/vsce && code --install-extension emeraldwalk.RunOnSave && code --install-extension formulahendry.code-runner && code --install-extension esbenp.prettier-vscode && code --install-extension syler.sass-indented"
+    "docs": "jsdoc -c jsdoc.json --readme ./global-utils/readme/README.md"
   },
   "repository": {
     "type": "git",
@@ -38,5 +37,10 @@
     "uglify-js": "^3.17.4",
     "webpack": "^5.90.3",
     "webpack-cli": "^5.1.4"
+  },
+  "devDependencies": {
+    "chokidar": "^3.6.0",
+    "del": "^4.1.1",
+    "gulp": "^5.0.0"
   }
 }
