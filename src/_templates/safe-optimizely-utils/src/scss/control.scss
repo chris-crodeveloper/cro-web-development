@@ -1,0 +1,13 @@
+/*
+ ** Developer: <%= developer %>
+ ** Date: <%= date %>
+ ** Test: <%= testName %>
+ ** Variation: Control
+ ** Description: <%= testDescription %> 
+ */
+
+@use "../../../../../utils/scss/" as vm;
+
+.<%= testId %> {
+    
+}

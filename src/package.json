@@ -1,27 +1,14 @@
 {
   "name": "create-cro-app",
   "version": "1.0.0",
-  "description": "Tool to generate a boilerplate development environment for CRO testing",
-  "main": "src/index.js",
-  "bin": {
-    "create-cro-app": "bin/create-cro-app.js"
-  },
+  "description": "Boilerplate development environment for CRO testing",
   "scripts": {
-    "serve": "node server.js",
+    "cro": "node server.js && gulp",
     "test": "echo \"Error: no test specified\" && exit 1",
     "docs": "jsdoc -c jsdoc.json --readme ./global-utils/readme/README.md"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/chris-crodeveloper/cro-web-development.git"
-  },
-  "author": "Chris Davies",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/chris-crodeveloper/cro-web-development/issues"
-  },
-  "homepage": "https://github.com/chris-crodeveloper/cro-web-development#readme",
   "dependencies": {
+    "cro-utils": "^1.0.1",
     "commander": "^12.1.0",
     "css-loader": "^6.10.0",
     "dotenv": "^16.4.5",
@@ -29,7 +16,7 @@
     "file-loader": "^6.2.0",
     "fs": "^0.0.1-security",
     "fs-extra": "^11.2.0",
-    "generator-cro": "^1.4.0",
+    "generator-cro": "^1.1.4",
     "inquirer": "^8.2.6",
     "jsdoc": "^4.0.2",
     "postcss": "^8.4.35",
