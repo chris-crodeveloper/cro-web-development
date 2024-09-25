@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "module": "es6",
+    "target": "es6",
+    "allowJs": true,
+    "moduleResolution": "Classic",
+    "maxNodeModuleJsDepth": 10
+  },
+  "include": ["node_modules/cro-utils/*"]
+}
